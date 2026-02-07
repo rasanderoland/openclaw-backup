@@ -8,11 +8,16 @@ _Learn about the person you're helping. Update this as you go._
 - **Timezone:** UTC
 - **Notes:** Prefers Swedish or English only
 
+## Communication Setup
+
+- **Primary channel:** Telegram via @rasandeclawbot
+- **Groups:** Multiple Telegram groups for different topics (automation, recipes, etc.)
+- **Expected behavior:** Reply to ALL messages in these groups without being tagged (only two members in each)
+- **Context:** Groups are unnamed; determine topic from message content
+
 ## Context
 
 - Using OpenClaw for personal automation
 - Interests: Home automation, recipe management (HelloFresh), task management (TickTick)
-- Communication: Telegram via @rasandeclawbot
-- Technical setup: VPS with systemd, GitHub integration, automated backups
 
 ---
