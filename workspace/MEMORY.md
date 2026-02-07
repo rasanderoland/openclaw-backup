@@ -8,6 +8,7 @@ _Last updated: 2026-02-07_
 - **Timezone:** UTC
 - **Communication:** Telegram (ID: 7964555583)
 - **Telegram bot:** @rasandeclawbot
+- **Language:** Swedish or English only (no other languages)
 
 ## Today's Session (2026-02-07)
 
