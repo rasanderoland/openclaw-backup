@@ -164,7 +164,23 @@ cd ~/.openclaw-backup && git push origin main --force
 | `~/.openclaw/.env` | Secrets (NEVER commit) |
 | `~/.openclaw/auto-backup.sh` | Backup script |
 | `~/.openclaw-backup/` | Local backup repo |
+| `~/.openclaw/sync-tasks.js` | GitHub Project sync script |
+| `~/.openclaw/update-tasks.js` | GitHub Issues update script |
+| `~/.npm-global/lib/node_modules/openclaw/skills/ticktick/` | TickTick skill |
 | `~/.config/gogcli/credentials.json` | gog CLI creds |
+
+## Skills
+
+### TickTick Skill
+- **Location:** `~/.npm-global/lib/node_modules/openclaw/skills/ticktick/`
+- **Purpose:** Read and create tasks in TickTick
+- **Status:** Created, needs API credentials in `.env`
+- **Usage:**
+```bash
+node ~/.npm-global/.../ticktick/ticktick.js tasks --status pending
+node ~/.npm-global/.../ticktick/ticktick.js create --title "Task" --project "OpenClaw"
+node ~/.npm-global/.../ticktick/ticktick.js complete --id 123456789
+```
 
 ## Security Rules
 
