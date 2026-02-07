@@ -1,50 +1,56 @@
 # OpenClaw Tasks & Projects
 
-_Last updated: 2026-02-07_
+_Last updated: 2026-02-07 15:01_
 
-## In Progress
+_Source: GitHub Project (github.com/users/rasanderoland/projects/1)_
 
-### High Priority
+## Overview
 
-### Medium Priority
-
-### Low Priority
+**Total:** 4 open, 1 closed
 
 ---
 
-## Completed (Today)
+## Tasks (from GitHub Project)
 
-### 2026-02-07
-- ✅ Telegram pairing fix (34LY9N57)
-- ✅ QMD backend enabled & installed
-- ✅ Backup script fixed with auto-push to GitHub
-- ✅ Thinking mode enabled
-- ✅ MEMORY.md recovered & documented
-- ✅ Chrome cleanup script (frees ~1.6 GB)
-- ✅ IPv6 fix for Telegram (NODE_OPTIONS=ipv4first)
-- ✅ Backup includes all OpenClaw directories
+### Open Tasks
+
+| Task |
+|------|
+| [Integrate Google Workspace CLI () for Gmail access](https://github.com/rasanderoland/openclaw-tasks/issues/2) |
+| [Integrate Bitwarden for password management](https://github.com/rasanderoland/openclaw-tasks/issues/3) |
+| [Integrate Perplexity for web search](https://github.com/rasanderoland/openclaw-tasks/issues/6) |
+| [Integrate TickTick for task management](https://github.com/rasanderoland/openclaw-tasks/issues/1) |
+
+### Completed Tasks
+
+| Task |
+|------|
+| [Set up Discord channel monitoring](https://github.com/rasanderoland/openclaw-tasks/issues/4) |
+
+
+---
+
+## Local Notes
+
+### In Progress
+- (Add local notes here)
+
+### Completed Today
+- (Synced from GitHub Project)
 
 ---
 
-## Todo
+## Commands
 
-### OpenClaw Core
-- [ ] Verify QMD indexing works with memory_search
-- [ ] Test Google Drive for Obsidian vault sharing
-- [ ] Set up GitHub auth for backup push (`gh auth login`)
+```bash
+# Sync tasks from GitHub
+node ~/.openclaw/sync-tasks.js
 
-### Integrations
-- [ ] Fix gog calendar credentials (gujo82@gmail.com)
-- [ ] Complete HelloFresh ingredients extraction
-- [ ] Get X/Twitter cookies working (bird skill)
-
-### Maintenance
-- [ ] Update OpenClaw to v2026.2.6
-
----
+# Add to crontab (every hour)
+0 * * * * node ~/.openclaw/sync-tasks.js
+```
 
 ## References
 
-- **GitHub:** https://github.com/rasanderoland/openclaw-backup
-- **Backup repo:** ~/.openclaw-backup/
-- **Logs:** /tmp/openclaw/openclaw-2026-02-07.log
+- **GitHub Project:** https://github.com/users/rasanderoland/projects/1
+- **Backup Repo:** https://github.com/rasanderoland/openclaw-backup
