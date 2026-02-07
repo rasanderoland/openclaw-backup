@@ -1,12 +1,12 @@
 # OpenClaw Tasks & Projects
 
-_Last updated: 2026-02-07 21:00_
+_Last updated: 2026-02-07 21:39_
 
-_Source: GitHub Project (github.com/users/rasanderoland/projects/1)_
+_Source: RasandeClaw Tasks (https://github.com/rasanderoland/openclaw-tasks/projects/1)_
 
 ## Overview
 
-**Total:** 4 open, 1 closed
+**Total:** 7 open, 0 closed
 
 ---
 
@@ -16,16 +16,18 @@ _Source: GitHub Project (github.com/users/rasanderoland/projects/1)_
 
 | Task |
 |------|
+| [Integrate TickTick for task management](https://github.com/rasanderoland/openclaw-tasks/issues/1) |
 | [Integrate Google Workspace CLI (gog) for Gmail/Calendar/Drive](https://github.com/rasanderoland/openclaw-tasks/issues/2) |
 | [Integrate Bitwarden for password management](https://github.com/rasanderoland/openclaw-tasks/issues/3) |
+| [Integrate Antigravity Auth for model access](https://github.com/rasanderoland/openclaw-tasks/issues/5) |
 | [Integrate Perplexity for web search](https://github.com/rasanderoland/openclaw-tasks/issues/6) |
-| [Integrate TickTick for task management](https://github.com/rasanderoland/openclaw-tasks/issues/1) |
+| [Rotate api keys ](https://github.com/rasanderoland/openclaw-tasks/issues/8) |
+| [Migrate Twitter access from cookies to API v2](https://github.com/rasanderoland/openclaw-tasks/issues/9) |
 
 ### Completed Tasks
 
 | Task |
 |------|
-| [Set up Discord channel monitoring](https://github.com/rasanderoland/openclaw-tasks/issues/4) |
 
 
 ---
