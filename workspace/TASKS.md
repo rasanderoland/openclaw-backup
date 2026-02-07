@@ -1,6 +1,6 @@
 # OpenClaw Tasks & Projects
 
-_Last updated: 2026-02-07 15:02_
+_Last updated: 2026-02-07 15:49_
 
 _Source: GitHub Project (github.com/users/rasanderoland/projects/1)_
 
@@ -16,7 +16,7 @@ _Source: GitHub Project (github.com/users/rasanderoland/projects/1)_
 
 | Task |
 |------|
-| [Integrate Google Workspace CLI () for Gmail access](https://github.com/rasanderoland/openclaw-tasks/issues/2) |
+| [Integrate Google Workspace CLI (gog) for Gmail/Calendar/Drive](https://github.com/rasanderoland/openclaw-tasks/issues/2) |
 | [Integrate Bitwarden for password management](https://github.com/rasanderoland/openclaw-tasks/issues/3) |
 | [Integrate Perplexity for web search](https://github.com/rasanderoland/openclaw-tasks/issues/6) |
 | [Integrate TickTick for task management](https://github.com/rasanderoland/openclaw-tasks/issues/1) |
