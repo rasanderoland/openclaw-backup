@@ -9,18 +9,47 @@ _Last updated: 2026-02-07_
 - **Communication:** Telegram (ID: 7964555583)
 - **Telegram bot:** @rasandeclawbot
 
+## Today's Session (2026-02-07)
+
+### Telegram Pairing Issue Resolved
+- **Problem:** Bot showed "not authorized" error
+- **Root cause:** User Telegram account not paired with bot
+- **Solution:** `openclaw pairing approve telegram 34LY9N57`
+- **Pairing code:** 34LY9N57 (Telegram ID: 7964555583)
+- **Command:** `openclaw pairing approve telegram <code>`
+
+### QMD Backend Enabled (Experimental)
+- **Bun:** Already installed (`/home/rasandeclaw/.bun/bin/bun`, v1.3.8)
+- **QMD installed:** `bun install -g https://github.com/tobi/qmd`
+- **Config added to openclaw.json:**
+  - `memory.backend: "qmd"`
+  - `memory.citations: "auto"`
+  - QMD runs from `~/.openclaw/agents/main/qmd/`
+- **First search may be slow** (downloads GGUF models on first use)
+
+### Thinking Mode Enabled
+- MiniMax-M2.1: `reasoning: true`
+- MiniMax-M2.1-lightning: `reasoning: true`
+
+### Backup System Fixed
+- **Script:** `~/.openclaw/auto-backup.sh`
+- **Schedule:** Hourly (cron: `0 * * * *`)
+- **Repo:** `~/.openclaw-backup/` → GitHub (force pushed to `main`)
+- **Remote:** `https://github.com/rasanderoland/openclaw-backup.git`
+- **Excludes:** `.env`, `credentials/`, `*.log`, `sessions/`, `.git/`
+- **Auto-push to GitHub:** Enabled in script
+
+### MEMORY.md Recovered
+- File was missing (never existed in backup or workspace)
+- Recreated with all relevant configuration
+- **Pushed to GitHub:** `workspace/MEMORY.md` in master/main branch
+
 ## Key Decisions & Preferences
 
-### Telegram Configuration
-- **Issue:** Bot showed "not authorized" error
-- **Solution:** Pair user with `openclaw pairing approve telegram 34LY9N57`
-- **Telegram ID:** 7964555583
-- **Bot token:** Stored in `.env` as `TELEGRAM_BOT_TOKEN`
-
-### Environment Variables
+### Environment Variables Migration
 - All credentials moved from `openclaw.json` to `~/.openclaw/.env`
-- Uses `${VAR_NAME}` syntax in config for env var interpolation
-- Systemd service loads `EnvironmentFile=/home/rasandeclaw/.openclaw/.env`
+- Uses `${VAR_NAME}` syntax in config
+- Systemd service: `EnvironmentFile=/home/rasandeclaw/.openclaw/.env`
 
 ### HelloFresh Workflow
 - **Cookie-based scraping** (Cloudflare blocks headless)
@@ -31,68 +60,48 @@ _Last updated: 2026-02-07_
 
 ### Google Workspace (gog)
 - **Account:** rasandeclaw@gmail.com
-- **Credentials:** OAuth 2.0 Desktop app (not Service Account)
-- **Credentials file:** `~/.config/gogcli/credentials.json`
+- **Credentials:** OAuth 2.0 Desktop app
 - **Working:** Gmail, Calendar
-- **Pending:** Drive (for Obsidian vault sharing)
-
-### QMD Memory Backend (Experimental)
-- **Enabled:** Yes (2026-02-07)
-- **Installation:** Bun + `bun install -g https://github.com/tobi/qmd`
-- **Config:** `memory.backend = "qmd"` in openclaw.json
-- **Location:** `~/.openclaw/agents/main/qmd/`
-
-### Backup Configuration
-- **Script:** `~/.openclaw/auto-backup.sh`
-- **Schedule:** Hourly (cron: `0 * * * *`)
-- **Backup repo:** `~/.openclaw-backup/` (local) → GitHub (pending auth)
-- **Remote:** https://github.com/rasanderoland/openclaw-backup.git
-- **Excludes:** `.env`, `credentials/`, `*.log`, `sessions/`, `.git/`
+- **Pending:** Drive (Obsidian vault sharing)
 
 ## OpenClaw Version & Updates
 
 ### Current Version
 - **Version:** 2026.2.3-1
-- **Latest:** 2026.2.6 (as of 2026-02-07)
+- **Latest:** 2026.2.6
 
-### Recent Changes (v2026.2.2 - v2026.2.6)
-- xAI (Grok) support added
+### v2026.2.6 Highlights
+- xAI (Grok) support
 - Token usage dashboard in Web UI
 - Voyage AI for memory embeddings
 - Telegram DM topic threadId fix
 - Cron scheduling fixes
 - Feishu/Lark plugin
-- QMD backend support
 
 ## Technical Notes
 
 ### Systemd Service
-- **Service file:** `~/.config/systemd/user/openclaw-gateway.service`
-- **Environment:** `EnvironmentFile=/home/rasandeclaw/.openclaw/.env`
+- **Service:** `~/.config/systemd/user/openclaw-gateway.service`
 - **Status:** `systemctl --user status openclaw-gateway`
-
-### Gateway Configuration
-- **Port:** 18789
-- **Mode:** local-only (loopback)
-- **Auth:** Token-based (`OPENCLAW_GATEWAY_TOKEN`)
 - **Logs:** `/tmp/openclaw/openclaw-2026-02-07.log`
 
-### Models
-- **Primary:** MiniMax-M2.1 (reasoning enabled)
-- **Secondary:** MiniMax-M2.1-lightning (reasoning enabled)
-- **Provider:** minimax-portal (OAuth)
+### Gateway Config
+- **Port:** 18789
+- **Mode:** local-only (loopback)
+- **Auth:** Token-based
 
 ## Files & Locations
 
 | Path | Description |
 |------|-------------|
 | `~/.openclaw/workspace/` | Agent workspace |
+| `~/.openclaw/workspace/MEMORY.md` | Long-term memory |
+| `~/.openclaw/workspace/memory/YYYY-MM-DD.md` | Daily notes |
 | `~/.openclaw/openclaw.json` | Main config |
 | `~/.openclaw/.env` | Secrets (NEVER commit) |
-| `~/.config/gogcli/credentials.json` | gog CLI credentials |
-| `~/.config/systemd/user/openclaw-gateway.service` | Systemd service |
 | `~/.openclaw/auto-backup.sh` | Backup script |
 | `~/.openclaw-backup/` | Local backup repo |
+| `~/.config/gogcli/credentials.json` | gog CLI creds |
 
 ## Security Rules
 
@@ -101,9 +110,8 @@ _Last updated: 2026-02-07_
 3. Use `${VAR_NAME}` syntax in config files
 4. Backup excludes: `.env`, `credentials/`, `*.log`, `sessions/`
 
-## Todo / In Progress
+## Todo
 
-- [ ] Set up GitHub auth for backup push (`gh auth login`)
-- [ ] Enable Google Drive Obsidian vault sharing
-- [ ] Complete QMD setup and verify indexing
-- [ ] Test backup push to GitHub
+- [ ] Verify QMD indexing works
+- [ ] Test Google Drive for Obsidian vault
+- [ ] Confirm backup push to GitHub working
