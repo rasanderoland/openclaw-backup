@@ -153,6 +153,13 @@ cd ~/.openclaw-backup && git push origin main --force
 - **Mode:** local-only (loopback)
 - **Auth:** Token-based
 
+### Daily Review
+- **Script:** `~/.openclaw/daily-review.js`
+- **Schedule:** Daily at 09:00 (cron: `0 9 * * *`)
+- **Log:** `~/.openclaw/daily-review.log`
+- **Reports:** `~/.openclaw/workspace/memory/review-YYYY-MM-DD.md`
+- **Checks:** MEMORY.md, TASKS.md, AGENTS.md, SOUL.md, USER.md, TOOLS.md, HEARTBEAT.md
+
 ## Files & Locations
 
 | Path | Description |
