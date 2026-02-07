@@ -157,10 +157,13 @@
     "telegram": {
       "enabled": true,
       "dmPolicy": "pairing",
-      "botToken": "8352035691:AAHOK0NzeuaAxN4xjI0zNSeuKgetTqkGYZw",
-      "groupPolicy": "allowlist",
+      "botToken": "${TELEGRAM_BOT_TOKEN}",
       "groups": {
-        "-1003751731882": {}
+        "-1003751731882": {
+          "groupPolicy": "open",
+          "requireMention": false,
+          "allowFrom": [7964555583]
+        }
       },
       "streamMode": "partial"
     }

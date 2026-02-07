@@ -8,6 +8,10 @@ _Last updated: 2026-02-07_
 - **Timezone:** UTC
 - **Communication:** Telegram (ID: 7964555583)
 - **Telegram bot:** @rasandeclawbot
+- **Telegram Groups:** Multiple unnamed groups for different topics
+- **Main Group ID:** `-1003751731882`
+- **Group Config:** `requireMention: false`, `groupPolicy: "open"`, `allowFrom: [7964555583]`
+- **Behavior:** Responds to ALL messages without needing mentions (only two members)
 - **Language:** Swedish or English only (no other languages)
 
 ## Today's Session (2026-02-07)
@@ -18,6 +22,14 @@ _Last updated: 2026-02-07_
 - **Solution:** `openclaw pairing approve telegram 34LY9N57`
 - **Pairing code:** 34LY9N57 (Telegram ID: 7964555583)
 - **Command:** `openclaw pairing approve telegram <code>`
+
+### Telegram Group Auto-Reply Config
+- **Group ID:** `-1003751731882`
+- **Config:** 
+  - `groupPolicy: "open"` - all senders allowed
+  - `requireMention: false` - respond to all messages
+  - `allowFrom: [7964555583]` - only approved sender (Gustaf)
+- **Purpose:** Auto-reply in groups without needing mentions
 
 ### QMD Backend Enabled (Experimental)
 - **Bun:** Already installed (`/home/rasandeclaw/.bun/bin/bun`, v1.3.8)
