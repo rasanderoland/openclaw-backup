@@ -1,12 +1,12 @@
 # OpenClaw Tasks & Projects
 
-_Last updated: 2026-02-07 20:01_
+_Last updated: 2026-02-07 21:00_
 
 _Source: GitHub Project (github.com/users/rasanderoland/projects/1)_
 
 ## Overview
 
-**Total:** 5 open, 1 closed
+**Total:** 4 open, 1 closed
 
 ---
 
@@ -20,7 +20,6 @@ _Source: GitHub Project (github.com/users/rasanderoland/projects/1)_
 | [Integrate Bitwarden for password management](https://github.com/rasanderoland/openclaw-tasks/issues/3) |
 | [Integrate Perplexity for web search](https://github.com/rasanderoland/openclaw-tasks/issues/6) |
 | [Integrate TickTick for task management](https://github.com/rasanderoland/openclaw-tasks/issues/1) |
-| [Migrate Twitter access from cookies to API v2](https://github.com/rasanderoland/openclaw-tasks/issues/9) |
 
 ### Completed Tasks
 

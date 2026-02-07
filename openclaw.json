@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.2.3-1",
-    "lastTouchedAt": "2026-02-06T18:16:56.057Z"
+    "lastTouchedVersion": "2026.2.6-3",
+    "lastTouchedAt": "2026-02-07T21:30:44.580Z"
   },
   "env": {
     "shellEnv": {
@@ -35,8 +35,8 @@
     }
   },
   "wizard": {
-    "lastRunAt": "2026-02-06T15:28:24.945Z",
-    "lastRunVersion": "2026.2.3-1",
+    "lastRunAt": "2026-02-07T21:30:44.554Z",
+    "lastRunVersion": "2026.2.6-3",
     "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
@@ -124,14 +124,12 @@
   "tools": {
     "web": {
       "search": {
-        "provider": "perplexity",
+        "enabled": true,
+        "provider": "brave",
+        "apiKey": "${BRAVE_API_KEY}",
         "maxResults": 10,
         "timeoutSeconds": 30,
-        "perplexity": {
-          "apiKey": "${PERPLEXITY_API_KEY}",
-          "baseUrl": "https://api.perplexity.ai",
-          "model": "perplexity/sonar-pro"
-        }
+        "cacheTtlMinutes": 15
       }
     }
   },
@@ -159,7 +157,7 @@
     "telegram": {
       "enabled": true,
       "dmPolicy": "pairing",
-      "botToken": "${TELEGRAM_BOT_TOKEN}",
+      "botToken": "8352035691:AAHOK0NzeuaAxN4xjI0zNSeuKgetTqkGYZw",
       "groupPolicy": "allowlist",
       "streamMode": "partial"
     }
@@ -170,7 +168,7 @@
     "bind": "loopback",
     "auth": {
       "mode": "token",
-      "token": "${OPENCLAW_GATEWAY_TOKEN}"
+      "token": "413d99def3d1fb5592c04217e1e9c940a365a0cf0003c57b"
     },
     "tailscale": {
       "mode": "off",
