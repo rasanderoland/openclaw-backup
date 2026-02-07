@@ -173,13 +173,34 @@ cd ~/.openclaw-backup && git push origin main --force
 
 ### TickTick Skill
 - **Location:** `~/.npm-global/lib/node_modules/openclaw/skills/ticktick/`
-- **Purpose:** Read and create tasks in TickTick
-- **Status:** Created, needs API credentials in `.env`
+- **Purpose:** Full task management in TickTick
+- **Status:** Created with full CRUD support
+- **Features:**
+  - List tasks (filter by project/status)
+  - Create tasks with due dates and reminders
+  - Edit tasks (title, due date, reminder)
+  - Complete tasks
+  - Delete tasks
+  - Move tasks between projects
 - **Usage:**
 ```bash
-node ~/.npm-global/.../ticktick/ticktick.js tasks --status pending
-node ~/.npm-global/.../ticktick/ticktick.js create --title "Task" --project "OpenClaw"
-node ~/.npm-global/.../ticktick/ticktick.js complete --id 123456789
+# List tasks
+ticktick tasks --status pending
+
+# Create task with due date and reminder
+ticktick create --title "Buy milk" --project "Shopping" --due "2024-01-15" --reminder "2024-01-15 09:00"
+
+# Edit task
+ticktick edit --id 123456789 --title "New title" --due "2024-01-20"
+
+# Complete task
+ticktick complete --id 123456789
+
+# Delete task
+ticktick delete --id 123456789
+
+# Move to project
+ticktick move --id 123456789 --project "Work"
 ```
 
 ## Security Rules
