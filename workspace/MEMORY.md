@@ -48,6 +48,17 @@ _Last updated: 2026-02-07_
 - **Script:** `~/.openclaw/auto-backup.sh`
 - **Schedule:** Hourly (cron: `0 * * * *`)
 - **Repo:** `~/.openclaw-backup/` → GitHub (force pushed to `main`)
+
+### GitHub Tasks Repository (Kanban Board)
+- **Repo:** `rasanderoland/openclaw-tasks`
+- **Project ID:** `PVT_kwHODgRTtM4BOmP2`
+- **Purpose:** Personal task management via GitHub Issues Kanban board
+- **Sync script:** `~/.openclaw/sync-tasks.js`
+- **Commands:** `gh issue list/create/view/close --repo rasanderoland/openclaw-tasks`
+- **Labels:** `task`, `api`, etc.
+- **Script:** `~/.openclaw/auto-backup.sh`
+- **Schedule:** Hourly (cron: `0 * * * *`)
+- **Repo:** `~/.openclaw-backup/` → GitHub (force pushed to `main`)
 - **Remote:** `https://github.com/rasanderoland/openclaw-backup.git`
 - **Excludes:** `.env`, `credentials/`, `*.log`, `sessions/`, `.git/`
 - **Auto-push to GitHub:** Enabled in script

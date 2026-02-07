@@ -52,6 +52,18 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 
+## Before Making Changes
+
+**Always verify before implementing potentially breaking changes:**
+
+- Modifying `openclaw.json` or other config files
+- Deleting or overwriting files
+- Changing integrations, skills, or credentials
+- Running commands that affect system state
+- Anything that could break existing functionality
+
+When uncertain, summarize what you plan to do and ask for confirmation first. It's better to pause and confirm than to break something.
+
 ## External vs Internal
 
 **Safe to do freely:**
