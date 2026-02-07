@@ -39,6 +39,68 @@ _Last updated: 2026-02-07_
 - **Excludes:** `.env`, `credentials/`, `*.log`, `sessions/`, `.git/`
 - **Auto-push to GitHub:** Enabled in script
 
+### Backup Configuration (2026-02-07 Updated)
+
+#### What Gets Backed Up
+| Path | Description |
+|------|-------------|
+| `workspace/` | Agent workspace (MEMORY.md, memory/, etc.) |
+| `agents/` | Agent configuration |
+| `canvas/` | Canvas UI files |
+| `completions/` | Shell completions (bash, fish, ps1, zsh) |
+| `cron/` | Scheduled jobs and run history |
+| `devices/` | Paired/pending devices |
+| `identity/` | Device authentication |
+| `telegram/` | Telegram channel state |
+| `update-check.json` | Update check metadata |
+| `openclaw.json` | Main OpenClaw configuration |
+
+#### What's Excluded (Never Backed Up)
+| Path | Reason |
+|------|--------|
+| `.env` | Contains API keys and passwords |
+| `credentials/` | Sensitive authentication files |
+| `browser/` | Chrome user data |
+| `media/` | Telegram media cache |
+| `sessions/` | Active session data |
+| `*.log` | Log files |
+| `node_modules/` | Dependencies |
+
+#### Backup Process
+```bash
+# Script location
+~/.openclaw/auto-backup.sh
+
+# How it works
+1. Rsync copies configured directories to ~/.openclaw-backup/
+2. Git commit with timestamp: "Backup: YYYY-MM-DD HH:MM"
+3. Force push to GitHub main branch
+
+# Schedule (cron)
+0 * * * * ~/.openclaw/auto-backup.sh  # Every hour at minute 0
+
+# Commands
+~/.openclaw/auto-backup.sh  # Manual run
+crontab -l                  # View schedule
+```
+
+#### GitHub Repository
+- **URL:** https://github.com/rasanderoland/openclaw-backup
+- **Branch:** main
+- **Auth:** Via GitHub CLI or PAT token
+
+#### Manual Commands
+```bash
+# Run backup manually
+~/.openclaw/auto-backup.sh
+
+# Check backup repo status
+cd ~/.openclaw-backup && git status
+
+# Force push to GitHub
+cd ~/.openclaw-backup && git push origin main --force
+```
+
 ### MEMORY.md Recovered
 - File was missing (never existed in backup or workspace)
 - Recreated with all relevant configuration
