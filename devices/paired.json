@@ -3,8 +3,8 @@
     "deviceId": "bcab817d9a26dfb880fc1d71c92a002ad78d73d11f91d44b14128fbbfa21fdd4",
     "publicKey": "zRtAwBEwe64SYTua_c7xpOChVJ0zXd5DiK6svhQSywA",
     "platform": "linux",
-    "clientId": "gateway-client",
-    "clientMode": "backend",
+    "clientId": "cli",
+    "clientMode": "cli",
     "role": "operator",
     "roles": [
       "operator"
@@ -24,12 +24,11 @@
           "operator.pairing"
         ],
         "createdAtMs": 1770375340811,
-        "lastUsedAtMs": 1770560975905
+        "lastUsedAtMs": 1770576505103
       }
     },
     "createdAtMs": 1770375340811,
-    "approvedAtMs": 1770375340811,
-    "displayName": "agent"
+    "approvedAtMs": 1770375340811
   },
   "c3f34e3beba612714bf5b1dfc2e0fbfda4ee0d9646f942b32ecd275e681a86ed": {
     "deviceId": "c3f34e3beba612714bf5b1dfc2e0fbfda4ee0d9646f942b32ecd275e681a86ed",
@@ -56,7 +55,7 @@
           "operator.pairing"
         ],
         "createdAtMs": 1770379513785,
-        "lastUsedAtMs": 1770572873160
+        "lastUsedAtMs": 1770576145208
       }
     },
     "createdAtMs": 1770379513785,
