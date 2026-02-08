@@ -1,4 +1,33 @@
 {
   "version": 1,
-  "jobs": []
+  "jobs": [
+    {
+      "id": "967c4bea-0f2b-4afd-8f18-fdbd30e22d9c",
+      "agentId": "main",
+      "name": "Pokemon phone reminder",
+      "enabled": true,
+      "deleteAfterRun": true,
+      "createdAtMs": 1770531889828,
+      "updatedAtMs": 1770531889828,
+      "schedule": {
+        "kind": "at",
+        "at": "2026-02-08T10:00:00.000Z"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Skicka påminnelse till gruppen: Påminn Illion om att ta med pokemontelefonen! 🔥",
+        "model": "minimax-portal/MiniMax-M2.1"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "-1003751731882"
+      },
+      "state": {
+        "nextRunAtMs": 1770544800000
+      }
+    }
+  ]
 }

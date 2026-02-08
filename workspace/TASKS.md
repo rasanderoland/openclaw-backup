@@ -1,12 +1,12 @@
 # OpenClaw Tasks & Projects
 
-_Last updated: 2026-02-08 05:00_
+_Last updated: 2026-02-08 06:00_
 
 _Source: GitHub Project (github.com/users/rasanderoland/projects/1)_
 
 ## Overview
 
-**Total:** 8 open, 0 closed
+**Total:** 9 open, 1 closed
 
 ---
 
@@ -17,6 +17,7 @@ _Source: GitHub Project (github.com/users/rasanderoland/projects/1)_
 | Task |
 |------|
 | [Integrate TickTick for task management](https://github.com/rasanderoland/openclaw-tasks/issues/1) |
+| [Investigate: https://github.com/BlockRunAI/ClawRouter](https://github.com/rasanderoland/openclaw-tasks/issues/11) |
 | [Integrate Google Workspace CLI (gog) for Gmail/Calendar/Drive](https://github.com/rasanderoland/openclaw-tasks/issues/2) |
 | [Integrate Bitwarden for password management](https://github.com/rasanderoland/openclaw-tasks/issues/3) |
 | [Integrate Antigravity Auth for model access](https://github.com/rasanderoland/openclaw-tasks/issues/5) |
@@ -29,6 +30,7 @@ _Source: GitHub Project (github.com/users/rasanderoland/projects/1)_
 
 | Task |
 |------|
+| [Create 'Investigation' column in Kanban board](https://github.com/rasanderoland/openclaw-tasks/issues/12) |
 
 
 ---
