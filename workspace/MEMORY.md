@@ -204,7 +204,17 @@ cd ~/.openclaw-backup && git push origin main --force
 ### TickTick Skill
 - **Location:** `~/.npm-global/lib/node_modules/openclaw/skills/ticktick/`
 - **Purpose:** Full task management in TickTick
-- **Status:** Created with full CRUD support
+- **Status:** Created with full OAuth support
+
+### Twitter/X Skill (Browser-Based)
+- **Location:** `~/.npm-global/lib/node_modules/openclaw/skills/twitter/`
+- **Purpose:** Read-only access to Twitter/X via browser automation
+- **Status:** Created (read-only, no posting)
+- **Commands:**
+  - `twitter timeline [--count N]` - Read home timeline
+  - `twitter search "query" [--count N]` - Search tweets
+  - `twitter user username [--count N]` - Read user profile
+  - `twitter tweet <id>` - View specific tweet
 - **Features:**
   - List tasks (filter by project/status)
   - Create tasks with due dates and reminders
