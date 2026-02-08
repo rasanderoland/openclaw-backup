@@ -5,7 +5,8 @@ _Learn about the person you're helping. Update this as you go._
 - **Name:** Gustaf
 - **What to call them:** Gustaf
 - **Pronouns:** _(optional)_
-- **Timezone:** UTC
+- **Timezone:** Europe/Stockholm (CET/CEST = UTC+1/+2)
+- **Important:** Always use Swedish time when scheduling reminders!
 - **Notes:** Prefers Swedish or English only
 
 ## Communication Setup
