@@ -14,8 +14,9 @@
   },
   "usageStats": {
     "minimax-portal:default": {
-      "lastUsed": 1770533861160,
-      "errorCount": 0
+      "lastUsed": 1770537383136,
+      "errorCount": 0,
+      "lastFailureAt": 1770535252421
     }
   }
 }

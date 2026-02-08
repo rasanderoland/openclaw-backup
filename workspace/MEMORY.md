@@ -317,3 +317,10 @@ If credentials are exposed (even accidentally):
 - [ ] Verify QMD indexing works
 - [ ] Test Google Drive for Obsidian vault
 - [ ] Confirm backup push to GitHub working
+
+## TickTick Integration (Working as of 2026-02-08)
+- **Client ID:** `miHBu9ZI2J6Lb7HBus`
+- **Token file:** `~/.openclaw/.ticktick_tokens.json`
+- **OAuth helper:** `~/.npm-global/lib/node_modules/openclaw/skills/ticktick/ticktick-oauth-simple.py`
+- **Callback URL:** `http://localhost:8080/callback`
+- **API limitations:** Task listing is limited - GET /task returns 500. Use app for browsing, API for create/edit/complete only.
