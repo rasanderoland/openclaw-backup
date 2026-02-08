@@ -245,10 +245,72 @@ ticktick move --id 123456789 --project "Work"
 
 ## Security Rules
 
-1. **NEVER** paste `.env` contents in chat
-2. **NEVER** commit credentials to git
-3. Use `${VAR_NAME}` syntax in config files
-4. Backup excludes: `.env`, `credentials/`, `*.log`, `sessions/`
+### 🔐 CRITICAL: Never Expose Credentials
+
+**GOLDEN RULES:**
+1. **NEVER** post credentials in GitHub issues (even private repos)
+2. **NEVER** paste `.env` contents in chat
+3. **NEVER** commit credentials to git
+4. **ALWAYS** use `${VAR_NAME}` syntax in config files, never hardcode values
+5. **ALWAYS** revoke and rotate credentials immediately if exposed
+
+### GitHub Issues Security Protocol
+
+**ABSOLUTELY FORBIDDEN in GitHub Issues:**
+- API keys/tokens of any kind
+- Access tokens (Bearer, OAuth, PAT)
+- Usernames + password combinations
+- Database connection strings
+- Private keys or certificates
+- Any secrets from `.env`
+
+**If credentials must be documented:**
+- Use placeholders only: `X_API_KEY=${X_API_KEY}`
+- Add comment: `# DO NOT FILL IN - Use .env instead`
+- Reference external secret manager if needed
+
+### GitHub Token Best Practices
+
+**Token naming convention:**
+- `GH_TOKEN` for GitHub PAT (in .env)
+- `GITHUB_TOKEN` alternative naming
+
+**Script template:**
+```javascript
+// ❌ NEVER: const GITHUB_TOKEN = 'ghp_xxxxxxxxxxxx';
+// ✅ ALWAYS: const GITHUB_TOKEN = process.env.GH_TOKEN;
+```
+
+**Token scopes (minimum required):**
+- `repo` - full control of private repos (for sync-tasks.js)
+- `read:user` - read user profile data
+- Never grant `delete_repo` or `admin:org` unless absolutely required
+
+### Credential Rotation Protocol
+
+If credentials are exposed (even accidentally):
+1. **IMMEDIATELY** revoke the credential on the provider's dashboard
+2. **IMMEDIATELY** create a new credential with minimum required scope
+3. **IMMEDIATELY** update `.env` with new credential
+4. **IMMEDIATELY** delete/edit any GitHub issues/comments where credentials appeared
+5. **Within 24h** check GitHub's "Exposed secrets" alerts
+6. **Document** the incident in MEMORY.md for future reference
+
+---
+
+**INCIDENT 2026-02-08:**
+- Issue #10 in `rasanderoland/openclaw-tasks` contained:
+  - `X_API_KEY: qicfiE5AupkBgDwUHsKsqHSN1`
+  - `X_ACCESS_TOKEN: 94094159-...`
+- **Action taken:** Issue deleted, credentials revoked, sync-tasks.js fixed
+- **Lesson:** GitHub Issues are NOT secure storage for secrets
+
+### Backup Exclusions
+| Path | Reason |
+|------|--------|
+| `.env` | Contains API keys and passwords |
+| `credentials/` | Sensitive authentication files |
+| `.git/` | Git history may contain accidentally committed secrets |
 
 ## Todo
 
