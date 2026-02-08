@@ -1,12 +1,12 @@
 # OpenClaw Tasks & Projects
 
-_Last updated: 2026-02-07 22:00_
+_Last updated: 2026-02-07 23:00_
 
 _Source: GitHub Project (github.com/users/rasanderoland/projects/1)_
 
 ## Overview
 
-**Total:** 7 open, 0 closed
+**Total:** 8 open, 0 closed
 
 ---
 
@@ -23,6 +23,7 @@ _Source: GitHub Project (github.com/users/rasanderoland/projects/1)_
 | [Integrate Perplexity for web search](https://github.com/rasanderoland/openclaw-tasks/issues/6) |
 | [Rotate api keys ](https://github.com/rasanderoland/openclaw-tasks/issues/8) |
 | [Migrate Twitter access from cookies to API v2](https://github.com/rasanderoland/openclaw-tasks/issues/9) |
+| [Regenerate Twitter API credentials](https://github.com/rasanderoland/openclaw-tasks/issues/10) |
 
 ### Completed Tasks
 
