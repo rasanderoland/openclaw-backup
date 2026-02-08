@@ -20,5 +20,8 @@ _Learn about the person you're helping. Update this as you go._
 
 - Using OpenClaw for personal automation
 - Interests: Home automation, recipe management (HelloFresh), task management (TickTick)
+- **Obsidian Vault:** `obsidian-main-vault` on Google Drive (shared with rasandeclaw@gmail.com)
+  - Full access via Google Drive API
+  - Can read/write notes and templates
 
 ---

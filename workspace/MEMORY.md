@@ -147,8 +147,36 @@ cd ~/.openclaw-backup && git push origin main --force
 ### Google Workspace (gog)
 - **Account:** rasandeclaw@gmail.com
 - **Credentials:** OAuth 2.0 Desktop app
-- **Working:** Gmail, Calendar
-- **Pending:** Drive (Obsidian vault sharing)
+- **Working:** Gmail, Calendar, Drive
+- **Keyring backend:** Uses system keyring for token storage
+
+### Obsidian Vault Access (2026-02-08)
+- **Vault:** obsidian-main-vault (Google Drive)
+- **Folder ID:** `18SeLSTYjBhFFe07KNZngZBRkTJcW5Dhr`
+- **Access:** Full access via OAuth token
+- **Token:** Stored in keyring, refreshed automatically
+- **API:** Google Drive API v3
+- **URL:** https://drive.google.com/drive/folders/18SeLSTYjBhFFe07KNZngZBRkTJcW5Dhr
+
+#### Access Commands
+```bash
+# List vault contents
+curl -H "Authorization: Bearer $ACCESS_TOKEN" \
+  "https://www.googleapis.com/drive/v3/files?q='18SeLSTYjBhFFe07KNZngZBRkTJcW5Dhr'+in+parents&fields=files(id,name)"
+
+# Get file content
+curl -H "Authorization: Bearer $ACCESS_TOKEN" \
+  "https://www.googleapis.com/drive/v3/files/$FILE_ID?alt=media" -o output.md
+
+# Sync folder to local
+rclone copy --drive-root-folder-id 18SeLSTYjBhFFe07KNZngZBRkTJcW5Dhr local/path/
+```
+
+#### Setup (if token expires)
+1. Run `gog auth add rasandeclaw@gmail.com --services drive,docs`
+2. Redirect URL will be: `http://127.0.0.1:38499/oauth2/callback`
+3. Complete OAuth in browser, copy callback URL
+4. Token is saved automatically to keyring
 
 ## OpenClaw Version & Updates
 
